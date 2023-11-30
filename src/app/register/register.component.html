@@ -1,0 +1,58 @@
+<app-menu></app-menu>
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col text-center">
+            <div class="card mt-3">
+                <div class="card-header">
+                    Registro de usuarios
+                </div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <div class="input-group-text">
+                            <i class="bi bi-person-circle"></i>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Nombre" [(ngModel)]="nombre">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-text">
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Apellido Paterno" [(ngModel)]="aPaterno">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-text">
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Apellido Materno" [(ngModel)]="aMaterno">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-text">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <input type="email" class="form-control" placeholder="Correo" [(ngModel)]="email">
+                    </div>
+                    <div class="input-group mt-3">
+                        <div class="input-group-text">
+                            <i class="bi bi-key"></i>
+                        </div>
+                        <input type="password" class="form-control" placeholder="Contraseña" [(ngModel)]="pass">
+                    </div>
+                </div>
+                <div class="alert alert-danger" role="alert" *ngIf="ShowError">Este corro ya existe, no se pudo registrar. </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary float-end" value="Entrar" (click)="register()">
+                       
+                        <div class="spinner-border spinner-border-sm" role="status" *ngIf="ShowLoadig">
+                          </div>
+                          Entrar
+                    </button>
+
+                </div>
+                
+            </div>
+            <a href="/login" class="link-success">Regrear a Login</a>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<app-menu></app-menu>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Publicación</title>
+</head>
+
+<body>
+
+    <div class="container" enctype="multipart/form-data">
+        <h1>Subir Publicación</h1>
+
+                <label for="nombre">Nombre de articulo o descripción</label>
+                <input type="text" id="nombre" name="nombre" [(ngModel)]="newP.nombre" >
+    
+                <label for="content">Categoria:</label>
+                <select class="form-select" [(ngModel)]="newP.categoria">
+                    <option value="Telefono">Telefono</option>
+                    <option value="Tableta">Tableta</option>
+                    <option value="Computadora">Computadora</option>
+                    <option value="ObjetoPersonal">ObjetoPersonal</option>
+                </select>
+    
+                <label for="foto">Imagen:</label>
+
+                <!--Seleccionar archivo-->
+                <input type="file" (change)="onFileSelected($event)"/>
+
+                <!--Nombre del archivo-->
+                <label for="fileName">Nombre del archivo:</label>
+                <input type="text" id="fileName" [(ngModel)]="fileName"/>
+                <br><br>
+                <!--Boton para subir el archivo
+                <button (click)="uploadFile()">Subir archivo</button>
+                <br>-->
+
+               <!-- <input type="file" id="foto" name="foto" accept="foto/*" [(ngModel)]="newP.foto">-->
+    
+                <!-- Campo para la fecha -->
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" [(ngModel)]="newP.fecha" >
+                <br>
+    
+                <!-- Campo para la ubicación -->
+                <!-- Campos para las coordenadas -->
+                <label for="latitud">Latitud:</label>
+                <input type="text" id="latitud" name="latitud" [(ngModel)]="latitud" readonly>
+                <label for="longitud">Longitud:</label>
+                <input type="text" id="longitud" name="longitud" [(ngModel)]="longitud" readonly>
+                <br>
+                <button type="button" (click)="obtenerUbicacion()">Obtener Ubicación</button>
+                <br>
+
+                    <button class="btn btn-outline-primary float-end mt-3" (click)="createPublicaciones()" >
+                        <i class="bi bi-cloud-upload"></i>
+                    </button>
+            </div> 
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #600373;;
+    padding: 15px;
+    text-align: right;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+nav a:hover {
+    background-color: #600373;
+}
+
+.navbar-custom a.navbar-brand,
+.navbar-custom a.nav-link {
+    color: #ffffff; /* Color de los enlaces en la barra de navegación */
+}
+
+.navbar-custom a.navbar-brand:hover,
+.navbar-custom a.nav-link:hover {
+    color: #9500ff; /* Color al pasar el ratón sobre los enlaces */
+}
+
+.navbar-custom .navbar-toggler-icon {
+    background-color: #ffffff; /* Color del icono del botón de alternancia */
+}
+
+/* Ajustar el margen superior para que no se superponga al contenido de la página */
+body {
+    padding-top: 56px;
+}
+
+/* Ajustar el margen superior para pantallas pequeñas cuando se muestra el botón de alternancia */
+@media (max-width: 767px) {
+    body {
+        padding-top: 70px;
+    }
+}
