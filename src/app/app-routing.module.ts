@@ -10,7 +10,7 @@ import { PublicarComponent } from './publicar/publicar.component';
 
 
 const routes: Routes = [
-  {path:'', redirectTo: '/login', pathMatch: 'full'},
+  {path:'', redirectTo: '/inicio', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
   {path: 'home', component: HomeComponent},
   {path: 'signup', component: RegisterComponent},

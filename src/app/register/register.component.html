@@ -1,4 +1,7 @@
 <app-menu></app-menu>
+<body>
+    
+
 <div class="container">
     <div class="row">
         <div class="col"></div>
@@ -41,7 +44,7 @@
                 </div>
                 <div class="alert alert-danger" role="alert" *ngIf="ShowError">Este corro ya existe, no se pudo registrar. </div>
                 <div class="card-footer">
-                    <button class="btn btn-primary float-end" value="Entrar" (click)="register()">
+                    <button class="custom-button float-end" value="Entrar" (click)="register()">
                        
                         <div class="spinner-border spinner-border-sm" role="status" *ngIf="ShowLoadig">
                           </div>
@@ -49,10 +52,11 @@
                     </button>
 
                 </div>
-                
+                <a href="/login" class="link-success">Regrear a Login</a>
             </div>
-            <a href="/login" class="link-success">Regrear a Login</a>
+            
         </div>
         <div class="col"></div>
     </div>
 </div>
+</body>

@@ -21,7 +21,7 @@ export class RegisterComponent {
     this.ShowLoadig=true
     this.api.register(this.nombre, this.aPaterno, this.aMaterno, this.email, this.pass).subscribe({
       next: respuesta => {
-        this.router.navigate(['/home'])
+        this.router.navigate(['/login'])
       },
       error: problemilla => {
         this.ShowLoadig=false

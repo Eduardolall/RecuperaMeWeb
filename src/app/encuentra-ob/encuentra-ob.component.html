@@ -23,6 +23,8 @@
           <p class="card-text">{{p.categoria}}</p>
           <p class="card-text">{{p.fecha}}</p>
           <p class="card-text">{{p.ubicacion}}</p>
+          <p class="card-text">Te puedes comunicar a este correo:{{p.correo}}</p>
+          <button class="btn btn-outline- float-end" ><i class="bi bi-chat-dots-fill"></i></button>
           <button class="btn btn-outline-success float-end" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editarPublicacion(p)"><i class="bi bi-pencil-fill"></i></button>
           <button class="btn btn-outline-danger float-end" (click)="borrarPublicacion(p.id)"><i class="bi bi-trash-fill"></i></button>
         </div>

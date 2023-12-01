@@ -1,44 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>RecuperaMe</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container">
-            <a class="navbar-brand" href="index.php"><img width="300" height="400" src="assets/img/logo.png" alt="#" /></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars ms-1"></i>
-                </button>
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#about">Informacion</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#team">Sobre nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/login">Ingresar</a></li>
-                    </ul>
-                </div>
-        </nav>
 
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container">
-                <div class="masthead-subheading">Bienvenido a nuestro rincón de objetos perdidos.</div>
-                <div class="masthead-heading text-uppercase">Encuentra lo que perdiste en un solo clic. </div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="/login">¡Comencemos la búsqueda!</a>
+<body id="page-top">
+    <!-- Navigation-->
+    <app-menu></app-menu>
+
+    <section class="page-section bienvenida-section" id="bienvenida">
+        <div class="container">
+            <div class="text-center bienvenida-content">
+                <h2 class="bienvenida-heading">¡Bienvenido a nuestro rincón de objetos perdidos!</h2>
+                <div class="bienvenida-subheading">Encuentra lo que perdiste en un solo clic.</div>
+                <a class="btn btn-primary btn-xl text-uppercase bienvenida-btn" href="/login">¡Comencemos la
+                    búsqueda!</a>
             </div>
-        </header>
-    </body>
-</html>        
+        </div>
+    </section>
+    <br><br>
+
+    <!-- Sección de Información -->
+
+    <!-- Team-->
+    <section class="page-section bg-light" id="team">
+        <div class="container">
+            <div class="text-center bienvenida-content">
+                <h2 class="bienvenida-heading" style="color: black;">Informacion sobre nuestro sitio Web!</h2>
+                <div class="bienvenida-subheading" style="color: black;">Lo que pretende nuestro sitio web es poder dar solución a un problema que hay en el Instituto tecnológico de Ciudad Hidalgo, y es el de los objetos personales que perdemos ya sea por distracción o porque solo se nos olvido y para ello tenemos esta solución que permite a los alumnos y al personal de ITSCH generar una publicación donde puede subir una imagen del objeto personal darle una descripción donde los demás podrán mirar la publicación y contactar a la persona mediante correo electrónico. </div>
+                <a class="text-uppercase " href="/login">¡Comencemos la
+                    búsqueda!</a>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="text-center">
+                <h2 style="color: black;">Autores del sitio web</h2>
+                <h3 class="section-subheading text-muted">Información personal</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="..." />
+                        <h4>Eduardo Sanchez Calderon</h4>
+                        <p class="text-muted">Programador</p>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Eduardo Sanchez Calderon Twitter Profile"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Eduardo Sanchez Calderon Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Eduardo Sanchez Calderon LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
+                        <h4>Yamileth Ximena Ontiveroz Manzur</h4>
+                        <p class="text-muted">Programador</p>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="..." />
+                        <h4>Horacio Morales Garcia</h4>
+                        <p class="text-muted">Programador</p>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        
+    </section>
+
+
+
+</body>
+
+</html>

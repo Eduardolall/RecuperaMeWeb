@@ -59,7 +59,7 @@ export class ApiRestService {
   }
 
   createPublicaciones(categoria:string, fecha:string, foto:string, 
-    idcoleccion:string, nombre:string, ubicacion:string){
+    idcoleccion:string, nombre:string, ubicacion:string, correo:string){
     const newDoc =  {
       "fields": {
       "categoria": {
@@ -79,6 +79,9 @@ export class ApiRestService {
       },
       "ubicacion": {
         "stringValue": ubicacion
+      },
+      "correo": {
+        "stringValue": correo
       }
     }
   }

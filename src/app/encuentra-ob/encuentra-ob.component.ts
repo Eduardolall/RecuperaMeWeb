@@ -9,7 +9,7 @@ import { ApiRestService } from '../api-rest.service';
 })
 export class EncuentraObComponent {
   publicaciones = [
-    {categoria: "", fecha:"", foto:"", idcoleccion:"", nombre:"", stability:'', ubicacion:"", id:""},
+    {categoria: "", fecha:"", foto:"", idcoleccion:"", nombre:"", stability:'', ubicacion:"", id:"", correo:""},
     
   ]
   modP = {nombre: "", id: ""}
@@ -36,6 +36,7 @@ export class EncuentraObComponent {
           nombre:  p.fields.hasOwnProperty('nombre')? p.fields.nombre.stringValue: "",
           stability:  p.fields.hasOwnProperty('stability')? p.fields.stability.intValue: "",
           ubicacion:  p.fields.hasOwnProperty('ubicacion')? p.fields.ubicacion.stringValue: "",
+          correo:  p.fields.hasOwnProperty('correo')? p.fields.correo.stringValue: "",
           id: p.name.split("/").pop()
         }))
 

@@ -56,19 +56,20 @@ export class PublicarComponent {
   }
 
   createPublicaciones(){
+  const correo = localStorage.getItem("correo") || ""
   const miUUID = uuidv4();
   this.lat = this.latitud + ''
   this.lon = this.longitud + ''
   this.newP.ubicacion = this.lat + " " + this.lon
   const idcoleccion = miUUID
   this.uploadFile()
-  this.newP.foto = "gs://recuperame-669ba.appspot.com/" +this.fileName
+  this.newP.foto = "https://firebasestorage.googleapis.com/v0/b/recuperame-669ba.appspot.com/o/images%2F0ab53305-8950-4875-939f-e75712fcbf42?alt=media&token=b99e411a-6e53-4d7f-adbd-03443d3b2fdf"
   if(this.newP.categoria == "" || this.newP.nombre == ""){
     alert("Bebes escribir la pregunta y seleccionar la categoria")
     return
   }
   this.api.createPublicaciones(this.newP.categoria, 
-    this.newP.fecha, this.newP.foto, idcoleccion , this.newP.nombre, this.newP.ubicacion ).subscribe({
+    this.newP.fecha, this.newP.foto, idcoleccion , this.newP.nombre, this.newP.ubicacion, correo ).subscribe({
       next: respuesta => {
         this.router.navigate(['/encuentra'])
       },
